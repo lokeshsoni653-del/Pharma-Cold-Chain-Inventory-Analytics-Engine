@@ -966,7 +966,7 @@ if not alert_df.empty:
         return "color: #D32F2F; font-weight: 600;"
 
     st.dataframe(
-        alert_display.style.applymap(highlight_temp, subset=["Current °C"]),
+        alert_display.style.map(highlight_temp, subset=["Current °C"]),
         use_container_width=True,
         hide_index=True,
         height=min(len(alert_display) * 38 + 38, 320),
